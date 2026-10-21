@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<title>Chapter test | Little Green Learners</title>
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><span aria-hidden="true">🌱</span> Little Green Learners</a>
+  <nav aria-label="Main"><a href="index.html">🏠 Home</a><a href="test.html" aria-current="page">❓ Take a test</a><a href="results.html">🏅 My results</a></nav>
+</header>
+<main>
+  <section id="profile" hidden>
+    <h1>Let's start your test</h1>
+    <p class="lead">Tell us who you are so we can show your results.</p>
+    <form id="profile-form" class="card" novalidate>
+      <label class="field"><span>Your name</span><input id="name" autocomplete="off" maxlength="60"></label>
+      <label class="field"><span>Class or school (optional)</span><input id="group" autocomplete="off" maxlength="60"></label>
+      <p class="err" id="profile-err" role="alert"></p>
+      <button class="btn" type="submit">Continue</button>
+    </form>
+  </section>
+
+  <section id="picker" hidden>
+    <h1 id="hello">Hello!</h1>
+    <p class="lead">Pick a chapter. Each test has four questions.</p>
+    <div class="grid" id="chapter-list"></div>
+    <div class="actions"><a class="btn alt" href="results.html">See my results</a><button class="btn alt" id="change-student" type="button">Not you? Change name</button></div>
+  </section>
+
+  <section id="quiz" hidden>
+    <h1 id="quiz-title"></h1>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="progress" aria-hidden="true"><i id="bar"></i></div>
+    <div class="card"><div id="question"></div><p class="err" id="quiz-err" role="alert"></p></div>
+    <div class="actions spread">
+      <span><button class="btn alt" id="back" type="button">Previous</button> <button class="btn alt" id="quit" type="button">Leave test</button></span>
+      <button class="btn" id="next" type="button">Next question</button>
+    </div>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/test.js"></script>
+</body>
+</html>
